@@ -1,26 +1,25 @@
 #include <stdio.h>
-
-int main(){
-	int a[5];
-    int sum = 0;
+ 
+#define MAX_SIZE 100
+ 
+int main()
+{
+    int arr[MAX_SIZE];
+    int n;
     int i;
-    for (i = 0; i < 5; i++) {
-        scanf("%d", &a[i]);
-	}
-	for(i = 0; i < 5; i++){
-		sum += a[i];
-	}
-	printf("Sum = %d\n", sum);
-	int max = a[0];
-	int min = a[0];
-	for(i = 0; i < 5; i++){
-		if(a[i] > max){
-			max = a[i];
-		}
-		if(a[i] < min){
-			min = a[i];
-		}
-	}
-	printf("Max array = %d\n", max);
-	printf("Min array = %d", min);
+    do
+    {
+        printf("Nhap so luong phan tu: ");
+        scanf("%d", &n);
+    } while (n < 1);
+    for (i = 0; i < n; i++)
+    {
+        printf("Nhap a[%d] = ", i);
+        scanf("%d", &arr[i]);
+    }
+    for (i = 0; i < n; i++)
+    {
+        printf("\nGia tri a[%d] = %d", i, *(arr + i));
+    }
 }
+ 
